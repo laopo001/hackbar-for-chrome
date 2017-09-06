@@ -5,11 +5,11 @@
 chrome.devtools.panels.create(
     'HackBar',
     null, // No icon path
-    'Panel/index.html',
-    function(panel){
+    'panel-dist/index.html',
+    function (panel) {
 
         chrome.devtools.network.onRequestFinished.addListener(
-            function(request) {
+            function (request) {
 
                 var div = document.createElement("div");
                 var text = document.createTextNode(JSON.stringify(request));
