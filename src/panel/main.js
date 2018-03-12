@@ -6,7 +6,7 @@ const Option = Select.Option;
 const OptGroup = Select.OptGroup;
 const TabPane = Tabs.TabPane;
 import 'antd/dist/antd.css';
-
+import './main.css'
 import BODY1 from './Body1'
 import JSONP from './JSONP'
 import Cookie from './Cookie'

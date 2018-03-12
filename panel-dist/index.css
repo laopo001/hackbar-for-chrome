@@ -19056,4 +19056,103 @@ li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper:hover {
     padding: 0;
     opacity: 0;
   }
+}* {
+    scrollbar-face-color: #9bc630;
+    /*面子*/
+    scrollbar-arrow-color: #C0C0C0;
+    /*箭头*/
+    scrollbar-3dlight-color: #C0C0C0;
+    /*最外左*/
+    scrollbar-highlight-color: #FFFFFF;
+    /*左二*/
+    scrollbar-shadow-color: #FFFFFF;
+    /*右二*/
+    scrollbar-darkshadow-color: #C0C0C0;
+    /*右一*/
+    scrollbar-track-color: #f3f3f3;
+    /*滑道*/
+}
+
+
+/*滚动条整体*/
+
+::-webkit-scrollbar {
+    width: 6px !important;
+    /*滚动条宽度*/
+}
+
+
+/*滚动条按钮*/
+
+::-webkit-scrollbar-button {}
+
+::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+    /*滑道全部*/
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f3f3f3;
+    /*滑道*/
+    -webkit-border-radius: 4px;
+    /*滑道圆角宽度*/
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #9bc630;
+    /*滑动条表面*/
+    border: solid 1px #C0C0C0;
+    /*滑动条边框*/
+    border-radius: 4px;
+    /*滑动条圆角宽度*/
+}
+
+
+/*横竖滚动条交角*/
+
+::-webkit-scrollbar-corner {
+    background-color: #9bc630;
+}
+
+
+/*横竖滚动条交角图案*/
+
+::-webkit-resizer {
+    /*background-image: url(/public/img/resizer-inactive.png);*/
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+
+/*鼠标滑过滑动条*/
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #F3F3E0;
+}
+
+.layout {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    font-size: 5em;
+}
+
+.ant-cascader-picker {
+    vertical-align: initial;
+}
+
+.ant-table-body {
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+}
+
+.ant-table-thead>tr>th,
+.ant-table-tbody>tr>td {
+    padding: 16px 8px;
+    white-space: nowrap;
+}
+
+.plus_omit {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

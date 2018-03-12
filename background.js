@@ -96,21 +96,21 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 // 	console.log("activeTabs = ", activeTabs);
 // });
 //////////////////////////////
-chrome.webRequest.onBeforeRequest.addListener(function (details) {
-	//console.log(details)
-	if (details.method == "GET" && details.type == "script") {
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", details.url, true);
-		xhr.onreadystatechange = function () {
-			if (xhr.readyState == 4) {
+// chrome.webRequest.onBeforeRequest.addListener(function (details) {
+// 	//console.log(details)
+// 	if (details.method == "GET" && details.type == "script") {
+// 		var xhr = new XMLHttpRequest();
+// 		xhr.open("GET", details.url, true);
+// 		xhr.onreadystatechange = function () {
+// 			if (xhr.readyState == 4) {
 
-				var content = xhr.responseText
-				if (new RegExp('^[^\\(\\)]+\\([^\\(\\)]+\\);?$').test(content)) {
-					console.log(content)
+// 				var content = xhr.responseText
+// 				if (new RegExp('^[^\\(\\)]+\\([^\\(\\)]+\\);?$').test(content)) {
+// 					console.log(content)
 
-				}
-			}
-		}
-		xhr.send();
-	}
-}, { urls: ["<all_urls>"] })
+// 				}
+// 			}
+// 		}
+// 		xhr.send();
+// 	}
+// }, { urls: ["<all_urls>"] })

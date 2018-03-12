@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import { Button, Row, Col, Select, Icon, Input, Cascader, Checkbox, message, Table, Form,Popover } from 'antd';
+import { Button, Row, Col, Select, Icon, Input, Cascader, Checkbox, message, Table, Form, Popover } from 'antd';
 const FormItem = Form.Item;
 const ButtonGroup = Button.Group;
 const Option = Select.Option;
@@ -31,12 +31,12 @@ var JSONP = React.createClass({
 
             request.getContent((content, encoding) => {
                 // if(content.match(/^\s*<|^{/)){return;}
-
-                if (new RegExp(this.state.Reg).test(content)) {
+                let strArr = content.match(new RegExp(this.state.Reg));
+                if (strArr) {
                     //     alert(content)
                     var obj = {
                         url: request.request.url,
-                        content: content
+                        content: strArr[0]
                     }
                     //  alert(this.state.data)
                     this.state.data.push(obj)
@@ -116,10 +116,10 @@ var JSONP = React.createClass({
                     {...formItemLayout}
                     label="过滤:"
                     hasFeedback
-                    >
-                    <Input value={this.state.Reg} onChange={(event) => { this.setState({ Reg: event.target.value }) } } placeholder="过滤正则" style={{ width: '90%', marginRight: 8 }} /> <Icon type="delete" onClick={() => {
+                >
+                    <Input value={this.state.Reg} onChange={(event) => { this.setState({ Reg: event.target.value }) }} placeholder="过滤正则" style={{ width: '90%', marginRight: 8 }} /> <Icon type="delete" onClick={() => {
                         this.setState({ data: [] })
-                    } } />
+                    }} />
                 </FormItem>
 
                 <Table size="small" dataSource={this.state.data} columns={columns} />
