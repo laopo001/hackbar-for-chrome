@@ -11,34 +11,6 @@ import BODY1 from './Body1'
 import JSONP from './JSONP'
 import Cookie from './Cookie'
 
-
-const Child = React.createClass({
-    getInitialState() {
-        return {
-            name: this.props.name,
-        };
-    },
-    render() {
-        return <div>{
-            this.props.name != null ? String(this.props.name) : String(this.state.name)
-        }<button onClick={() => { console.log(this.props.name); this.setState({ name: !this.state.name }); this.props.onChange(!this.state.name) }}>cs</button></div>
-    }
-})
-
-const Parent = React.createClass({
-    getInitialState() {
-        return {
-            name: false,
-        };
-    },
-
-    render() {
-        return <div><Child onChange={(x) => { this.setState({ name: x }); }}></Child></div>
-    }
-})
-
-
-
 var Root = React.createClass({
     getInitialState() {
         return { checked: true };

@@ -5,8 +5,10 @@
   "main": "none",
   "scripts": {
     "build": "webpack --env.panel --env.popup",
-    "build:panel": "webpack --env.panel --watch",
-    "build:popup": "webpack --env.popup --watch",
+    "build:panel": "webpack --env.panel",
+    "build:popup": "webpack --env.popup",
+    "watch:panel": "webpack --env.panel --watch",
+    "watch:popup": "webpack --env.popup --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +22,6 @@
   },
   "homepage": "https://github.com/laopo001/hackbar-for-chrome#readme",
   "dependencies": {
-    "abc": "0.0.5",
     "abc-react": "^0.2.12",
     "antd": "^2.13.0",
     "dva": "^2.0.1",

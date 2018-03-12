@@ -5,8 +5,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
-            react: 'abc-react',
-            'react-dom': 'abc-react'
+            // react: 'abc-react',
+            // 'react-dom': 'abc-react'
         }
     },
     module: {

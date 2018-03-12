@@ -1,4 +1,4 @@
-import React, {ReactDOM } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom'
 import { Button, Row, Col, Select, Icon, Input, Cascader, Checkbox, message, Tabs, Form, Tree } from 'antd';
 const ButtonGroup = Button.Group;
