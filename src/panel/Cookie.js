@@ -61,7 +61,6 @@ var Cookie = React.createClass({
 
         try {
             chrome.runtime.sendMessage({ type: "cookies_getAll", data: details }, (response) => {
-
                 this.setState({ data: response.cookies, orginData: response.cookies })
             });
 

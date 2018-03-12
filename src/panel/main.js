@@ -12,9 +12,36 @@ import JSONP from './JSONP'
 import Cookie from './Cookie'
 
 
+const Child = React.createClass({
+    getInitialState() {
+        return {
+            name: this.props.name,
+        };
+    },
+    render() {
+        return <div>{
+            this.props.name != null ? String(this.props.name) : String(this.state.name)
+        }<button onClick={() => { console.log(this.props.name); this.setState({ name: !this.state.name }); this.props.onChange(!this.state.name) }}>cs</button></div>
+    }
+})
+
+const Parent = React.createClass({
+    getInitialState() {
+        return {
+            name: false,
+        };
+    },
+
+    render() {
+        return <div><Child onChange={(x) => { this.setState({ name: x }); }}></Child></div>
+    }
+})
+
+
+
 var Root = React.createClass({
     getInitialState() {
-        return {};
+        return { checked: true };
     },
 
     componentDidMount() {
@@ -27,18 +54,18 @@ var Root = React.createClass({
         }
         return (
             <div style={{ padding: '0 20px' }}>
-                <Tabs defaultActiveKey="1" onChange={callback} tabBarExtraContent={<Button onClick={function () { location.reload() }}><Icon type="reload" /></Button>}>
-                    <TabPane tab="URL" key="1">
-                        <BODY1 />
-                    </TabPane>
-                    <TabPane tab="filter" key="2">
-                        <JSONP />
-                    </TabPane>
-                    <TabPane tab="cookie" key="3">
-                        <Cookie />
-                    </TabPane>
-                </Tabs>
-            </div>
+            <Tabs defaultActiveKey="1" onChange={callback} tabBarExtraContent={<Button onClick={function () { location.reload() }}><Icon type="reload" /></Button>}>
+                <TabPane tab="URL" key="1">
+                    <BODY1 />
+                </TabPane>
+                <TabPane tab="filter" key="2">
+                    <JSONP />
+                </TabPane>
+                <TabPane tab="cookie" key="3">
+                    <Cookie />
+                </TabPane>
+            </Tabs>
+            </div >
         );
     }
 });

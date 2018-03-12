@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactDOM } from 'react';
 import ReactDOM from 'react-dom'
 import { Button, Row, Col, Select, Icon, Input, Cascader, Checkbox, message, Tabs, Form, Tree } from 'antd';
 const ButtonGroup = Button.Group;
@@ -98,6 +98,10 @@ var Root = React.createClass({
         );
     }
 });
+
+
+
+
 ReactDOM.render(
     <Root />,
     document.getElementById("root")

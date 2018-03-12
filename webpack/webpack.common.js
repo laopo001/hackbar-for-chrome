@@ -3,7 +3,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx'],
+        alias: {
+            react: 'abc-react',
+            'react-dom': 'abc-react'
+        }
     },
     module: {
         loaders: [
