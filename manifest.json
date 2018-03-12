@@ -1,7 +1,7 @@
 ﻿{
 	"manifest_version": 2,
 	"name": "hackbar for chrome",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"background": { "scripts": ["jquery-2.0.0.min.js", "background.js"] },
 	"devtools_page": "devtools.html",
 	"page_action": {
