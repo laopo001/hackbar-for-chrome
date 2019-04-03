@@ -1,4 +1,7 @@
 # hackbar-for-chrome
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/laopo001/hackbar-for-chrome.svg)](https://greenkeeper.io/)
+
 hackbar的Chrome浏览器插件
 
 url模块encode|xss,sql转码
